@@ -27,4 +27,8 @@ export class LoginComponent {
     this.router.navigate(['/register']);
   }
 
+
+  navigateToRecuperacion() {  
+    this.router.navigate(['/recuperar']);
+  }
 }

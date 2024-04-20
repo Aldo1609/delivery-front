@@ -4,18 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { OrdersComponent } from './orders/orders.component';
-import { LoginComponent } from './login/login.component';
+import { OrdersComponent } from './modules/orders/orders.component';
+import { LoginComponent } from './modules/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { RegisterComponent } from './login/register.component';
+import { RegisterComponent } from './modules/login/register.component';
 import { ToastrModule } from 'ngx-toastr';
+import { RecuperacionComponent } from './modules/login/recuperacion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RecuperacionComponent
   ],
   imports: [
     BrowserModule,
