@@ -10,7 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './modules/login/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import { RecuperacionComponent } from './modules/login/recuperacion.component';
-import { PendientesComponent } from './modules/orders/pendientes/pendientes.component';
+import { HomeComponent } from './modules/home/home.component';
+import { AceptadasComponent } from './modules/orders/aceptadas/aceptadas.component';
+import { EnviadasComponent } from './modules/orders/enviadas/enviadas.component';
+import { CanceladasComponent } from './modules/orders/canceladas/canceladas.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { PendientesComponent } from './modules/orders/pendientes/pendientes.comp
     LoginComponent,
     RegisterComponent,
     RecuperacionComponent,
-    PendientesComponent
+    HomeComponent,
+    AceptadasComponent,
+    EnviadasComponent,
+    CanceladasComponent
   ],
   imports: [
     BrowserModule,

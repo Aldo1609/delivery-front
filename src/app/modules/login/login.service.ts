@@ -7,19 +7,13 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LoginService {
-  private isAuthenticatedStatus: boolean = false;
 
   constructor(private http: HttpClient) { }
 
   login(correo: string, contrasena: string): Observable<any> {
     return this.http.post('http://localhost:8082/api/v1/login', { correo, contrasena }).pipe(
-      tap(() => {
-        this.isAuthenticatedStatus = true;
-      })
     );
   }
 
-  isAuthenticated(): boolean {
-    return this.isAuthenticatedStatus;
-  }
+
 }

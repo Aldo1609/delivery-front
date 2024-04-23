@@ -13,14 +13,14 @@
       </a>
       <div class="flex-1 relative hidden md:flex items-center justify-center">
         <ul class="mx-auto inline-flex gap-6 text-sm font-light">
-          <li><a class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="">Ordenes Abiertas</a></li>
-          <li><a href="">Ordenes Aceptadas</a></li>
-          <li><a href="">Ordenes Enviadas</a></li>
-          <li><a href="">Ordenes Canceladas</a></li>
+          <li><a class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1">Ordenes Abiertas</a></li>
+          <li><a (click)="navigateToAceptadas(); $event.preventDefault()">Ordenes Aceptadas</a></li>
+          <li><a (click)="navigateToEnviadas(); $event.preventDefault()">Ordenes Enviadas</a></li>
+          <li><a (click)="navigateToCanceladas(); $event.preventDefault()">Ordenes Canceladas</a></li>
         </ul>
         <ul class="absolute right-0">
           <li class="relative">
-            <a class=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Contacto</a>
+            <a (click)="navigateToHome(); $event.preventDefault()" class=" h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase" href="">Home</a>
           </li>
         </ul>
       </div>
@@ -35,13 +35,13 @@
 <div class="bg-gray-200 w-full h-full py-5 flex justify-center items-center">
   <div *ngFor="let order of orders" class="relative pl-1 bg-gray-200 flex justify-center rounded-xl hover:scale-105 duration-500 transform transition cursor-pointer">
       <!-- Tag Discount -->
-      <div class="top-0 left-0 mt-3 px-2 rounded-lg absolute z-30 bg-green-500 text-gray-100 text-xs md:text-sm font-medium md:block">Open</div>
+      <div class="top-0 left-0 mt-3 px-2 rounded-lg absolute z-30 bg-green-500 text-gray-100 text-xs md:text-sm font-medium md:block">Pendiente</div>
       <div class="top-0 left-0 h-2 md:h-3 mt-5 px-2 absolute z-20 bg-green-500"></div>
       <div class="top-0 left-0 h-2 md:h-3 mt-6 pl-5 rounded-3xl absolute z-0 bg-green-600"></div>
       <div class="w-52 pb-2 bg-white rounded-xl shadow-xl z-10">
-        <div class="relative h-60 w-full">
-          <img [src]="getFoodImage(order.id_comida)" class="h-full w-full object-cover object-center rounded-t-xl" alt="">
-        </div>
+      <div class="relative h-60 w-full">
+        <img [src]="getFoodImage(order.id_comida)" class="h-full w-full object-cover object-center rounded-t-xl" alt="">
+      </div>
           <div class="px-2 py-1">
               <!-- Product Title -->
               <div class="text-sm md:text-base font-bold pr-2">{{ getFoodName(order.id_comida) }}</div>
@@ -54,7 +54,8 @@
               <!-- Alamat -->
               <p class="pb-1 md:pb-2 text-xs md:text-sm text-gray-500">{{ order.cliente }}</p>
               <!-- Tombol pesan -->
-              <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl w-14 md:w-16 p-1 text-gray-100 hover:text-blue-900" href="#">Order</a>
+              <a class="inset-x-0 bottom-0 flex justify-center bg-blue-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl w-14 md:w-16 p-1 text-gray-100 hover:text-blue-900" href="#">Aceptar</a>
+              <a class="inset-x-0 bottom-0 flex justify-center bg-red-500 hover:bg-white text-sm md:text-base border hover:border-2 hover:border-blue-500 rounded-xl w-14 md:w-16 p-1 text-gray-100 hover:text-blue-900" href="#">Cancelar</a>
           </div>
       </div>
   </div> 
