@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from './orderService';
-import { FOOD_ID_TO_NAME } from './food-id-to-name';
+import { FOOD_ID_TO_NAME} from './food-id-to-name';
+import { FOOD_ID_TO_IMAGE_URL } from './food-id-to-image';
 import { DELIVERY_ID_TO_NAME } from './delivery-id-to-name';
 import { Order } from '../models/order';
 
@@ -21,6 +22,10 @@ export class OrdersComponent implements OnInit {
 
   getFoodName(id: number): string {
     return FOOD_ID_TO_NAME[id] || 'Desconocido';
+  }
+
+  getFoodImage(id: number): string {
+    return FOOD_ID_TO_IMAGE_URL[id] || 'assets/images/default.jpg';
   }
 
   getDeliveryStatusName(id: number): string {

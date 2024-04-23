@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './modules/login/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import { RecuperacionComponent } from './modules/login/recuperacion.component';
+import { PendientesComponent } from './modules/orders/pendientes/pendientes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RecuperacionComponent } from './modules/login/recuperacion.component';
     OrdersComponent,
     LoginComponent,
     RegisterComponent,
-    RecuperacionComponent
+    RecuperacionComponent,
+    PendientesComponent
   ],
   imports: [
     BrowserModule,

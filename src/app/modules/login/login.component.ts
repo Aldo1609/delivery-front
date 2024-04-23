@@ -3,6 +3,7 @@ import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 import { LoginData } from '../models/login';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,10 @@ export class LoginComponent {
       const email = this.loginForm.get('correo')?.value || '';
       const password = this.loginForm.get('contrasena')?.value || '';
       this.loginService.login(email, password).subscribe(() => {
-        this.router.navigate(['/orders']);
+        this.router.navigate(['/home']);
+      }, error => {
+        console.error('Error:', error);
+        Swal.fire('Error', 'Email o Contraseña incorrecta', 'error');
       });
     }
   }
