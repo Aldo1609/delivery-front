@@ -34,6 +34,8 @@ Se usa arquitectura de microservicios con 3 servicios:
 
 📏 PostgreSQL
 
+📏 Angular 14.2.3
+
 
 
 
