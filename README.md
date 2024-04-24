@@ -1,27 +1,64 @@
-# Delivery
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.12.
+# DeliveryApp
 
-## Development server
+▶️ Progreso del proyecto: 50%
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto es una aplicacion demo imitando aplicaciones de Delivery donde los usuarios pueden crear ordenes de restaurantes y los administradores pueden ver estas ordenes en 4 estatus: Pendientes, Aceptados, Enviados, Cancelados, estos mismos pueden aceptar ordenes o cancelarlas imitando aplicaciones de delivery
 
-## Code scaffolding
+```bash
+🔧 Back-end desarrollado en [Springboot 3.0]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🔧 Front-end desarrollado en  [Angular 14.2.3]
+```
 
-## Build
+Se usa arquitectura de microservicios con 3 servicios:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- LoginService: Este se encarga de la autenticacion del usuario asi como opciones de recuperar contraseña y registrar usuarios.
 
-## Running unit tests
+- ProductService: Este se encarga de rellenar los productos y se comunica con el servicio de OrderService.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- OrderService: Este se encarga de procesar las ordenes y aplica validaciones al momento de crear estas ordenes
 
-## Running end-to-end tests
+🔧 Base de datos en PostgreSQL
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## Requisitos
+
+📏 JDK 17
+
+📏 Springboot 3.0
+
+📏 PostgreSQL
+
+📏 Angular 14.2.3
+
+
+
+
+
+## Referencias
+
+Diagrama de arquitectura (%50 completado)
+
+
+- https://ibb.co/2MhkVN1
+
+
+```bash
+  LoginService: Proximamente 
+```
+
+```bash
+  ProductService: Proximamente 
+```
+
+```bash
+  OrderService: Proximamente 
+```
+
+
+
