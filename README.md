@@ -49,15 +49,15 @@ Diagrama de arquitectura (%50 completado)
 
 
 ```bash
-  LoginService: Proximamente 
+  LoginService: https://github.com/Aldo1609/delivery-app-microservices 
 ```
 
 ```bash
-  ProductService: Proximamente 
+  ProductService: https://github.com/Aldo1609/delivery-app-microservices 
 ```
 
 ```bash
-  OrderService: Proximamente 
+  OrderService: https://github.com/Aldo1609/delivery-app-microservices 
 ```
 
 
