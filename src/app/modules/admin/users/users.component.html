@@ -1,0 +1,102 @@
+
+<body class="text-gray-800 font-inter">
+    <!--sidenav -->
+    <div class="fixed left-0 top-0 w-64 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu transition-transform">
+        <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
+
+            <h2 class="font-bold text-2xl">DELIVERY <span class="bg-[#f84525] text-white px-2 rounded-md">APP</span></h2>
+        </a>
+        <ul class="mt-4">
+            <span class="text-gray-400 font-bold">ADMIN</span>
+            <li class="mb-1 group">
+                <a href="" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class="ri-home-2-line mr-3 text-lg"></i>
+                    <span class="text-sm">Dashboard</span>
+                </a>
+            </li>
+            <li class="mb-1 group">
+                <a href="" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                    <i class='bx bx-user mr-3 text-lg'></i>                
+                    <span class="text-sm">Users</span>
+                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                </a>
+                <ul class="pl-7 mt-2 hidden group-[.selected]:block">
+                    <li class="mb-4">
+                        <a href="" class="text-gray-900 text-sm flex items-center hover:text-[#f84525] before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">All</a>
+                    </li> 
+                    <li class="mb-4">
+                        <a href="" class="text-gray-900 text-sm flex items-center hover:text-[#f84525] before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Roles</a>
+                    </li> 
+                </ul>
+            </li>
+            <li class="mb-1 group">
+                <a href="" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
+                    <i class='bx bx-list-ul mr-3 text-lg'></i>                
+                    <span class="text-sm">Activities</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
+    <!-- end sidenav -->
+
+    <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-200 min-h-screen transition-all main">
+
+      <!-- Content -->
+        <div class="p-6">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md lg:col-span-2">
+                    <div class="flex justify-between mb-4 items-start">
+                        <div class="font-medium">Usuarios</div>
+                         <div class="dropdown">
+                            <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600"><i class="ri-more-fill"></i></button>
+                            <ul class="dropdown-menu shadow-md shadow-black/5 z-30 hidden py-1.5 rounded-md bg-white border border-gray-100 w-full max-w-[140px]">
+                                <li>
+                                    <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                        <div class="rounded-md border border-dashed border-gray-200 p-4">
+                            <div class="flex items-center mb-0.5">
+                                <div class="text-xl font-semibold">{{ deliveryStatusCounts['Pendiente'] }}</div>
+                            </div>
+                            <span class="text-yellow-400 text-sm">Pendientes</span>
+                        </div>
+                        <div class="rounded-md border border-dashed border-gray-200 p-4">
+                            <div class="flex items-center mb-0.5">
+                                <div class="text-xl font-semibold">{{ deliveryStatusCounts['Aceptada'] }}</div>
+                            </div>
+                            <span class="text-green-400 text-sm">Aceptadas</span>
+                        </div>
+                        <div class="rounded-md border border-dashed border-gray-200 p-4">
+                            <div class="flex items-center mb-0.5">
+                                <div class="text-xl font-semibold">{{ deliveryStatusCounts['Entregada'] }}</div>
+                            </div>
+                            <span class="text-blue-400 text-sm">Enviadas</span>
+                        </div>
+                        <div class="rounded-md border border-dashed border-gray-200 p-4">
+                            <div class="flex items-center mb-0.5">
+                                <div class="text-xl font-semibold">{{ deliveryStatusCounts['Cancelada'] }}</div>
+                            </div>
+                            <span class="text-red-400 text-sm">Canceladas</span>
+                        </div>
+                    </div>
+                    <div>
+                        <canvas id="order-chart"></canvas>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+
+

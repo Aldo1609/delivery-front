@@ -14,6 +14,8 @@ import { HomeComponent } from './modules/home/home.component';
 import { AceptadasComponent } from './modules/orders/aceptadas/aceptadas.component';
 import { EnviadasComponent } from './modules/orders/enviadas/enviadas.component';
 import { CanceladasComponent } from './modules/orders/canceladas/canceladas.component';
+import { AdminComponent } from './modules/admin/admin.component';
+import { UsersComponent } from './modules/admin/users/users.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CanceladasComponent } from './modules/orders/canceladas/canceladas.comp
     HomeComponent,
     AceptadasComponent,
     EnviadasComponent,
-    CanceladasComponent
+    CanceladasComponent,
+    AdminComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

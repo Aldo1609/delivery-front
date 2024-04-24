@@ -12,4 +12,9 @@ export class OrderService {
   getOrders(): Observable<Order[]> {
     return this.http.get<Order[]>('http://localhost:8081/api/v1/orders');
   }
+
+  updateOrderDelivery(id: number, delivery: number): Observable<Order> {
+    return this.http.put<Order>(`http://localhost:8081/api/v1/orders/delivery/${id}`, { delivery });
+  }
+
 }

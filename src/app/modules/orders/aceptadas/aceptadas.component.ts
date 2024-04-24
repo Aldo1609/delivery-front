@@ -23,6 +23,21 @@ export class AceptadasComponent implements OnInit {
     });
   }
 
+  changeDelivery(order: Order, newDelivery: number) {
+    this.orderService.updateOrderDelivery(order.id, newDelivery).subscribe(updatedOrder => {
+      const index = this.orders.findIndex(o => o.id === updatedOrder.id);
+      if (index !== -1) {
+        this.orders[index] = updatedOrder;
+      }
+    }, error => {
+      console.error('Error updating order delivery:', error);
+    }, () => {
+      this.orderService.getOrders().subscribe(data => {
+        this.orders = data.filter(order => order.delivery === 1);
+      });
+    });
+  }
+
   getFoodName(id: number): string {
     return FOOD_ID_TO_NAME[id] || 'Desconocido';
   }

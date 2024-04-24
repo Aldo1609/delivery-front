@@ -17,4 +17,12 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/ordersPendientes']);
   }
 
+  navigateToAdmin() {  
+    this.router.navigate(['/admin']);
+  }
+
+  navigateToPendientes() {  
+    this.router.navigate(['/ordersPendientes']);
+  }
+
 }
