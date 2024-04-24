@@ -49,16 +49,10 @@ Diagrama de arquitectura (%50 completado)
 
 
 ```bash
-  LoginService: https://github.com/Aldo1609/delivery-app-microservices 
+  BackEnd Services: https://github.com/Aldo1609/delivery-app-microservices 
 ```
 
-```bash
-  ProductService: https://github.com/Aldo1609/delivery-app-microservices 
-```
 
-```bash
-  OrderService: https://github.com/Aldo1609/delivery-app-microservices 
-```
 
 
 
